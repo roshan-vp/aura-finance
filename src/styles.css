@@ -1,0 +1,306 @@
+[hidden] {
+  display: none !important;
+}
+
+.auth-screen {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 28px 16px;
+}
+
+.auth-card {
+  width: min(440px, 100%);
+  padding: clamp(24px, 6vw, 42px);
+}
+
+.auth-brand {
+  margin-bottom: 30px;
+}
+
+.auth-card h1 {
+  font-size: clamp(25px, 6vw, 32px);
+}
+
+.auth-description,
+#startupMessage {
+  margin: 10px 0 24px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.auth-card form {
+  display: grid;
+  gap: 16px;
+}
+
+.auth-card .submit-btn {
+  min-height: 44px;
+  margin-top: 4px;
+}
+
+.text-button {
+  border: 0;
+  padding: 12px 0 0;
+  background: transparent;
+  color: #a7b5c9;
+  font-size: 11px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.text-button:hover {
+  color: var(--cyan);
+}
+
+.auth-message {
+  margin: 14px 0 0;
+  color: #ff9bab;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.account-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.account-email {
+  max-width: min(38vw, 260px);
+  overflow: hidden;
+  color: #aab6c8;
+  font-size: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.connection-notice {
+  position: sticky;
+  z-index: 4;
+  top: 0;
+  padding: 10px 16px;
+  background: rgba(130, 54, 65, .96);
+  color: #fff1f3;
+  text-align: center;
+  font-size: 11px;
+}
+
+.state-card {
+  margin: 12px 0 18px;
+  padding: 16px 18px;
+  color: #b7c5d8;
+  font-size: 11px;
+}
+
+.error-state {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  border: 1px solid rgba(251, 113, 133, .26);
+  border-radius: 12px;
+  background: rgba(251, 113, 133, .07);
+  color: #ffc0ca;
+}
+
+.migration-notice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin: 12px 0 18px;
+  padding: 17px 19px;
+}
+
+.migration-notice strong {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.migration-notice p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.migration-notice button,
+.account-controls button,
+#retryData {
+  min-height: 40px;
+  flex: none;
+}
+
+.distribution-total {
+  display: none;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: -4px 0 16px;
+  color: #9aa6b8;
+  font-size: 10px;
+}
+
+.distribution-total strong {
+  color: #e8eff8;
+  font-size: 15px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.distribution-rings {
+  display: none;
+}
+
+.ring-card {
+  min-width: 0;
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  gap: 7px;
+  padding: 13px 7px 12px;
+  border: 1px solid rgba(255,255,255,.055);
+  border-radius: 14px;
+  background: rgba(255,255,255,.018);
+}
+
+.ring-visual {
+  position: relative;
+  display: grid;
+  width: min(116px, 100%);
+  aspect-ratio: 1;
+  place-items: center;
+}
+
+.ring-visual svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  transform: rotate(-90deg);
+}
+
+.ring-track,
+.ring-progress {
+  fill: none;
+  stroke-width: 7;
+}
+
+.ring-track {
+  stroke: rgba(255,255,255,.08);
+}
+
+.ring-progress {
+  stroke: var(--ring-color);
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 4px color-mix(in srgb, var(--ring-color) 45%, transparent));
+  transition: stroke-dashoffset .45s var(--ease);
+}
+
+.ring-center {
+  position: absolute;
+  display: grid;
+  justify-items: center;
+  gap: 3px;
+}
+
+.ring-icon {
+  color: var(--ring-color);
+  font-size: 17px;
+  line-height: 1;
+}
+
+.ring-percent {
+  color: #f0f5fb;
+  font-size: 12px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.ring-name {
+  max-width: 100%;
+  overflow: hidden;
+  color: #c1ccda;
+  font-size: 9px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ring-amount {
+  max-width: 100%;
+  overflow: hidden;
+  color: var(--ring-color);
+  font-size: 11px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+  .account-controls {
+    gap: 7px;
+  }
+
+  .account-email {
+    max-width: 34vw;
+    font-size: 9px;
+  }
+
+  .account-controls button {
+    min-height: 40px;
+    padding: 7px 9px;
+    font-size: 9px;
+  }
+
+  .migration-notice {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .migration-notice button {
+    width: 100%;
+  }
+
+  .distribution-total:not(:empty) {
+    display: flex;
+  }
+
+  #distributionBar,
+  #distributionLegend {
+    display: none;
+  }
+
+  #distributionRings {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+  }
+}
+
+@media (max-width: 360px) {
+  .app-shell {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .ring-card {
+    padding-right: 4px;
+    padding-left: 4px;
+  }
+
+  .ring-visual {
+    width: min(104px, 100%);
+  }
+
+  .ring-name {
+    font-size: 8px;
+  }
+
+  .ring-amount {
+    font-size: 10px;
+  }
+}
